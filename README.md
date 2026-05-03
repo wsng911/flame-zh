@@ -31,6 +31,21 @@ Flame 是一个自托管的服务器起始页，设计灵感来自 [SUI](https:/
 ### 使用 Docker（推荐）
 
 ```sh
+# 直接拉取镜像（无需构建）
+docker pull wsng911/flame-zh:latest
+
+# 运行容器
+docker run -d \
+  -p 5005:5005 \
+  -v /path/to/data:/app/data \
+  -e PASSWORD=your_password \
+  --name flame \
+  wsng911/flame-zh:latest
+```
+
+或者从源码构建：
+
+```sh
 # 克隆本仓库
 git clone https://github.com/wsng911/flame-zh.git
 cd flame-zh
